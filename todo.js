@@ -1,3 +1,5 @@
+
+// Create a new 2Dodo
 function add2Dodo() {
     const inputBox = document.querySelector('#inputBox');
     if (inputBox.value === '') {
@@ -14,20 +16,45 @@ function add2Dodo() {
     `;
     list.appendChild(newItem);
     inputBox.value = '';
+    saveList();
   }
 
-    function remove2Dodo() {
+  // Run add2Dodo() when the user presses enter key
+  const inputBox = document.querySelector('#inputBox');
+  inputBox.addEventListener('keyup', (e) => {
+    if (e.keyCode === 13) {
+      add2Dodo();
+    }
+  });
+  
+  // Remove 2Dodo
+  function remove2Dodo() {
         const listItemRmvBtn = document.querySelectorAll('.listItemRmvBtn');
         listItemRmvBtn.forEach((btn) => {
             btn.addEventListener('click', (e) => {
                 e.target.parentElement.remove();
             });
         });
+        saveList();
     }
 
+// clear all
+function clearAll() {
+    const list = document.querySelector('#list');
+    list.innerHTML = '';
+    saveList();
+  }
 
+// add list to locol storage
+function saveList() {
+    const list = document.querySelector('#list');
+    localStorage.setItem('list', list.innerHTML);
+  }
 
-//   <!-- Check box -->
-//   <input type="checkbox" id="check">
-//   <input type="text" id="inputBox" placeholder="This is a 2Dodo">
-//   <button class="listItemRmvBtn">Remove</button>
+// get list from locol storage
+function getList() {
+    const list = document.querySelector('#list');
+    list.innerHTML = localStorage.getItem('list');
+  }
+
+  getList();
