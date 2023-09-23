@@ -1,0 +1,131 @@
+body {
+  background: linear-gradient(to right, rgb(122, 78, 35), rgb(75, 75, 75));
+}
+.backHome {
+    color: white;
+}
+
+
+.containerMain {
+    position: absolute;
+    top: 45vh;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 85%;
+    border-radius: 10px;
+    max-height: 75%;
+    
+}
+
+.logo {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    
+    
+}
+
+.cntMainInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    border: 5px solid #ddd;
+    border-image: linear-gradient(to right, rgb(75, 75, 75), rgb(122, 78, 35)) 1;
+}
+
+#check {
+    width: 2%;
+}
+
+
+#inputBox {
+    font-size: 1.5vw;
+    width: 90%
+    
+}
+
+/* change color on checkbox */
+.listItem #check:checked + #inputBox {
+    background-color: #a8a8a8;
+    /* transition slowly */
+    transition: background-color 0.5s ease;
+}
+
+#addBtn {
+    font-size: 1.5vw;
+    width: 10%;
+    transition: background-color 0.5s ease;
+}
+
+/* mouse over addBtn turns dark */
+#addBtn:hover {
+    background-color: #a8a8a8;
+    /* transition slowly */
+    transition: background-color 0.5s ease;
+}
+
+ul {
+    padding: 0;
+    flex-direction: column;
+}
+
+.listItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f6;
+    border: 5px solid #ddd;
+    border-image: linear-gradient(to right, rgb(75, 75, 75), rgb(122, 78, 35)) 1;
+    /* font */
+    font-size: 2vw;
+    font-family: arial;
+}
+
+.listItemText {
+    margin-left: 10px;
+}
+
+.listItemRmvBtn {
+    font-size: 1.5vw;
+    width: 10%;
+    height: 100%;
+    cursor: pointer;
+    visibility: hidden;
+    /* colors */
+    background-color: #f6f6f6;
+    border: none;
+}
+
+.listItem:hover {
+    background-color: hsl(0, 0%, 77%);
+}
+
+.listItem:hover .listItemRmvBtn {
+    visibility: visible;
+}
+
+.clear {
+    padding-left: 2px;
+    margin: 0px;
+    width: 100%;
+}
+
+.clearBtn {
+    padding-left: 2px;
+    margin: 0px;
+    width: 100%;
+    border: 5px solid #ddd;
+    border-image: linear-gradient(to right, rgb(75, 75, 75), rgb(122, 78, 35)) 1;
+    transition: background-color 0.5s ease;
+}
+
+/* mouse over clearBtn turns dark */
+.clearBtn:hover {
+    background-color: #a8a8a8;
+    /* transition slowly */
+    transition: background-color 0.5s ease;
+}

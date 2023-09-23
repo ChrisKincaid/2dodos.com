@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2Dodo</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <!-- Main continer -->
+    <div class="containerMain">
+        <!-- Logo/Title -->
+        <img class="logo" src="2dodosLogo.png" alt="todo">
+        <!-- Input txtBx -->
+        <div class="cntMainInput">
+            <input type="text" id="inputBox" placeholder="Add a 2dodo!">
+            <button id="addBtn" onclick="add2Dodo()">Add</button>
+        </div>
+        <!-- List of 2dodos -->
+        <div class="cntMainList">
+            <ul id="list">  
+                <li class="listItem">
+                    <!-- Check box -->
+                    <input type="checkbox" id="check">
+                    <input type="text" id="inputBox" placeholder="This is a 2Dodo">
+                    <button id="listItemRmvBtn" class="listItemRmvBtn" onclick="remove2Dodo()">Remove</button>
+                </li>
+            </ul>
+            <!-- <div class="clear"> -->
+                <button class="clearBtn" id="clearBtn">CLEAR EVERYTHING</button>
+            <!-- </div> -->
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>
